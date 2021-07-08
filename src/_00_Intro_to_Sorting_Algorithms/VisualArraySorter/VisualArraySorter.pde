@@ -15,31 +15,36 @@ void setup() {
   }
 
   // 5. Call the noStroke() method to remove the outline for each shape
-  noStroke();
+  //noStroke();
+  stroke(0, 0, 125);
 }
 
 void draw() {
   // 6. Set the background color with background(r, g, b);
-
+  background(0,125,25);
 
   // 7. Set the color for your graph using the fill() method
-
+  fill(150,0,0);
 
   // 8. Draw a rectangle for each int in your array.
   //    the x value will be the loop variable multipled by (width/intArray.length)
   //    the y value will the height variable
   //    the width is (width/intArray.length)
   //    the height is the negative array value at the array index, e.g. -intArray[ i ]
-
+  for (int i = 0; i < arr.length; i++){
+    rect(i*(width/arr.length), height, (width/arr.length), -arr[i]);
+  }
 
   // 9. Call the stepSort method
-  
+  stepSort(arr);
 
   // 10. Extract the code from step 4 that randomizes the array into a new method.
   
 
   // 11. Call the method you made in step 10 when the mouse is pressed using the mousePressed variable
-  
+  if (mousePressed){
+    change();
+  }
 }
 
 int startIndex = 1;
@@ -56,4 +61,10 @@ void stepSort(int[] arr) {
     }
   }
   startIndex = 1;
+}
+
+void change(){
+  for (int i = 0; i < arr.length; i++){
+    arr[i] = (int)random(height);
+  }
 }
