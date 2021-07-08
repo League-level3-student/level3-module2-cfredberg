@@ -33,8 +33,8 @@ public class BogoSorter extends Sorter {
 	        	display.updateDisplay();
 	        	return;
 	        }
-	        int array1 = new Random().nextInt(array.length-1);
-	        int array2 = new Random().nextInt(array.length-1);
+	        int array1 = new Random().nextInt(array.length);
+	        int array2 = new Random().nextInt(array.length);
 	        int temp = array[array1];
 	        array[array1] = array[array2];
 	        array[array2] = temp;
