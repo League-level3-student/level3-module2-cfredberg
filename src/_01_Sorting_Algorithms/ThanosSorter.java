@@ -1,5 +1,6 @@
 package _01_Sorting_Algorithms;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class ThanosSorter extends Sorter {
@@ -45,19 +46,56 @@ public class ThanosSorter extends Sorter {
      * elements away randomly until half (in this case (n-1)/2) remain. The
      * algorithm is up to you!
      */
+    
+    int start = 0;
+    int end;
+    boolean cont = true;
+    
     @Override
     void sort(int[] arr, SortingVisualizer display) {
+    	ArrayList<Integer> left = new ArrayList<Integer>();
+    	end = arr.length;
+    	
+    	while(true) {
+    		orderCheck(arr, display);
+    		if (end-start > 1) {
+    			cutoff(arr, display);
+    		}
+        	if (!cont) {
+        		return;
+        	}
+    	}
+    	
+    }
+    
+    public void orderCheck(int[] arr, SortingVisualizer display) {
     	boolean outOfOrder = false;
-        for (int i = 0; i < arr.length-1; i++) {
-        	if (arr[i] > arr[i+1]) {
-        		outOfOrder = true;
-        	}
-        }
-        if (outOfOrder == true) {
-        	int num = new Random().nextInt(2);
-        	if (num == 0) {
-        		//continue with for loop here
-        	}
-        }
+    	for (int i = start; i < end-1; i++) {
+    		if (arr[i] > arr[i+1]) {
+    			outOfOrder = true;
+    		}
+    	}
+    	display.updateDisplay();
+    	if (!outOfOrder) {
+    		cont = false;
+    	}
+    }
+    
+    public void cutoff(int[] arr, SortingVisualizer display) {
+	    	int choice = new Random().nextInt(2);
+	    	if (choice == 0) {
+	    		for (int i = start; i < (end/2); i++) {
+	    			arr[i] = 0;
+	    		}
+	    		start = end/2;
+	    		display.updateDisplay();
+	    	}else {
+	    		for (int i = (end/2); i < end; i++) {
+	    			arr[i] = 0;
+	    		}
+	    		end = end/2;
+	    		display.updateDisplay();
+	    	}
+	    	System.out.println(start + ", " + end);
     }
 }
