@@ -53,15 +53,14 @@ public class ThanosSorter extends Sorter {
     
     @Override
     void sort(int[] arr, SortingVisualizer display) {
-    	ArrayList<Integer> left = new ArrayList<Integer>();
+    	//ArrayList<Integer> left = new ArrayList<Integer>();
     	end = arr.length;
     	
     	while(true) {
     		orderCheck(arr, display);
-    		if (end-start > 1) {
+    		if (cont) {
     			cutoff(arr, display);
-    		}
-        	if (!cont) {
+    		}else {
         		return;
         	}
     	}
@@ -69,6 +68,11 @@ public class ThanosSorter extends Sorter {
     }
     
     public void orderCheck(int[] arr, SortingVisualizer display) {
+    	for (int i = 0; i < arr.length; i++) {
+    		System.out.print(arr[i] + ", ");
+    	}
+    	System.out.println();
+    	System.out.println(start + ", " + end);
     	boolean outOfOrder = false;
     	for (int i = start; i < end-1; i++) {
     		if (arr[i] > arr[i+1]) {
@@ -82,6 +86,7 @@ public class ThanosSorter extends Sorter {
     }
     
     public void cutoff(int[] arr, SortingVisualizer display) {
+    	
 	    	int choice = new Random().nextInt(2);
 	    	if (choice == 0) {
 	    		for (int i = start; i < (end/2); i++) {
@@ -96,6 +101,7 @@ public class ThanosSorter extends Sorter {
 	    		end = end/2;
 	    		display.updateDisplay();
 	    	}
-	    	System.out.println(start + ", " + end);
+	    	//System.out.println(start + ", " + end);
+	    	
     }
 }
