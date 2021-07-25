@@ -18,36 +18,36 @@ public class _00_MoreAndMoreTests {
      assertEquals("8 x 11 = 88", Algorithms.multiply(8, 11));
    }
  
-//   @Test
-//   public void PrimeTest() {
-//     assertTrue(Algorithms.isPrime(3));
-//     assertTrue(Algorithms.isPrime(5));
-//     assertTrue(Algorithms.isPrime(541));
-//     assertFalse(Algorithms.isPrime(4));
-//     assertFalse(Algorithms.isPrime(12));
-//     assertFalse(Algorithms.isPrime(527));
-//   }
-//
-//   @Test
-//   public void SquareTest() {
-//     assertTrue(Algorithms.isSquare(4));
-//     assertTrue(Algorithms.isSquare(144));
-//     assertTrue(Algorithms.isSquare(64));
-//     assertTrue(Algorithms.isSquare(10201));
-//     assertTrue(Algorithms.isSquare(1));
-//     assertFalse(Algorithms.isSquare(3));
-//     assertFalse(Algorithms.isSquare(22));
-//     assertFalse(Algorithms.isSquare(143));
-//   }
-//
-//   @Test
-//   public void CubeTest() {
-//     assertTrue(Algorithms.isCube(27));
-//     assertTrue(Algorithms.isCube(216));
-//     assertTrue(Algorithms.isCube(729));
-//     assertTrue(Algorithms.isCube(1));
-//     assertFalse(Algorithms.isCube(3));
-//     assertFalse(Algorithms.isCube(22));
-//     assertFalse(Algorithms.isCube(143));
-//   }
+   @Test
+   public void PrimeTest() {
+     assertTrue(Algorithms.isPrime(3));
+     assertTrue(Algorithms.isPrime(5));
+     assertTrue(Algorithms.isPrime(541));
+     assertFalse(Algorithms.isPrime(4));
+     assertFalse(Algorithms.isPrime(12));
+     assertFalse(Algorithms.isPrime(527));
+   }
+
+   @Test
+   public void SquareTest() {
+     assertTrue(Algorithms.isSquare(4));
+     assertTrue(Algorithms.isSquare(144));
+     assertTrue(Algorithms.isSquare(64));
+     assertTrue(Algorithms.isSquare(10201));
+     assertTrue(Algorithms.isSquare(1));
+     assertFalse(Algorithms.isSquare(3));
+     assertFalse(Algorithms.isSquare(22));
+     assertFalse(Algorithms.isSquare(143));
+   }
+
+   @Test
+   public void CubeTest() {
+     assertTrue(Algorithms.isCube(27));
+     assertTrue(Algorithms.isCube(216));
+     assertTrue(Algorithms.isCube(729));
+     assertTrue(Algorithms.isCube(1));
+     assertFalse(Algorithms.isCube(3));
+     assertFalse(Algorithms.isCube(22));
+     assertFalse(Algorithms.isCube(143));
+   }
 }
