@@ -123,7 +123,7 @@ public class Algorithms {
 			boolean nowSorted = true;
 			for (int j = 0; j < words.size()-1; j++) {
 				int compare = words.get(j).compareTo(words.get(j+1));
-				if (compare > 1) {
+				if (compare > 0) {
 					String temp = words.get(j);
 					words.set(j, words.get(j+1));
 					words.set(j+1, temp);

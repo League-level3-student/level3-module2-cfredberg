@@ -93,13 +93,13 @@ public class _01_SearchingAndSortingAlgorithmsTest {
     @Test
     public void testSortStringContents() throws Exception {
         List<String> words = Arrays
-                //.asList(new String[] { "aby", "dap", "alt", "alb", "ama", "ard", "ana", "ala", "awn", "dah", "bar",
-                //        "bee", "bel", "bot", "bis", "cep", "alk", "cog", "col", "cwm", "dag", "ait", "dal", "daw" });
-        		.asList(new String[] { "dq", "aw", "ch" });
+                .asList(new String[] { "aby", "dap", "alt", "alb", "ama", "ard", "ana", "ala", "awn", "dah", "bar",
+                        "bee", "bel", "bot", "bis", "cep", "alk", "cog", "col", "cwm", "dag", "ait", "dal", "daw" });
+        		//.asList(new String[] { "dq", "aw", "ch" });
         				//"bee", "bel", "bot", "bis", "cep", "alk", "cog", "col", "cwm", "dag", "ait", "dal", "daw" });
-        Algorithms.sortWords(words);
-        //assertEquals("aby", Algorithms.sortWords(words).get(0));
-        //assertEquals("bar", Algorithms.sortWords(words).get(10));
-        //assertEquals("daw", Algorithms.sortWords(words).get(words.size() - 1));
+        //Algorithms.sortWords(words);
+        assertEquals("aby", Algorithms.sortWords(words).get(0));
+        assertEquals("bar", Algorithms.sortWords(words).get(10));
+        assertEquals("daw", Algorithms.sortWords(words).get(words.size() - 1));
     }
 }
